@@ -2,11 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .container{
-  margin-top: -750px;
-  text-align: center;
-  color:white;
+  width: 60%;
+  padding: 30px;
+  align: center;
+
 }
 .img-responsive{
   width: 100%;
   height: auto;
+}
+.head{
+  margin-top: 60px;
+  text-align: center;
 }

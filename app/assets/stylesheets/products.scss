@@ -1,10 +1,35 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*
 img{
   width:200px;
   height:auto;
 }
+.img{
+float:left;
+
+}
 .head{
   margin-top: 60px;
+  text-align: center;
+}
+
+.pname{
+font-size: 20px;
+display: block;
+}
+.stuff{
+  padding-top:30px;
+  float:left;
+  width: 39%;
+
+}
+*/
+.img-fluid{
+  width:200px;
+  height: 200px;
+}
+.it{
+  border:solid red;
 }
