@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'simple_pages/contact'
   root 'simple_pages#landing_page'
   resources :orders, only: [:index, :show, :create, :destroy]
+  post 'simple_pages/thank_you'
 
   get 'simple_pages/index'
 

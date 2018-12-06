@@ -38,7 +38,7 @@
         <li><%= link_to "About", simple_pages_about_path %></li>
         <li><%= link_to "Contact", simple_pages_contact_path %></li>
         <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-          <%= form.label :q %>
+          <%= form.label :q, "Search"%>
           <%= form.text_field :q, id: 'q', value: params[:q] %>
           <%= form.submit 'Search' %>
         <% end %>
