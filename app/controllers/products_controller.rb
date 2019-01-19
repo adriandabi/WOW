@@ -31,6 +31,8 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
+    @comment = @product.comments.new(comment_params)
+    @comment.user = current_user
 
     respond_to do |format|
       if @product.save
