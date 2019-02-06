@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 describe UsersController, type: :controller do
-  let(:user) {User.create!("adrian.dabi@aol.com", password:"123456", first_name: "H", last_name: "N", confirmed_at: Time.now)}
+
+  let(:user) {User.create!(email: "adrian.dabi@aol.com", password: "123456")}
 
   describe 'GET #show' do
     context 'when a user is logged in' do
@@ -19,8 +20,9 @@ describe UsersController, type: :controller do
     context 'when a user is not logged in' do
       it 'redirects to login' do
         get :show, params: { id: user.id }
-        expect(response).to redirect_to(root_path)
+        expect(response).to redirect_to new_user_session_path
       end
     end
   end
+
 end
