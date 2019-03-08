@@ -1,32 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="head">Products</h1>
-
-<!--example--
-<table class="container">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Image</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td class="pname"><%= product.name%></td>
-        <td class="stuff"><%= product.description %></td>
-        <td class="img"><%= image_tag(product.image_url) %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-
-  </tbody>
-</table><!--op 1 end-->
-<%= render partial: 'product' %>
+<% cache (cache_key_for_products) do %>
+  <%= render @products %>
+<% end %>
 
 
 

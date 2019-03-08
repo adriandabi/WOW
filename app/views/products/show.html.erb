@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<% cache @product do %>
 <p class="head">
   <strong>Name:</strong>
   <%= @product.name %>
@@ -30,7 +30,7 @@
 
 <%= render 'comments' %>
 
-
+<% end %>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
